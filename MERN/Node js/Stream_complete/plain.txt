@@ -1,0 +1,11 @@
+Introduction
+Streams are NOT ONLY for the streamig videos/Audios
+understanding streams and buffers
+Types of streams
+Create http server 
+Downloading big files from server(a goog way and a bad way)
+Copy files on files system (Readable/Writable/Transform)
+String processing (a good way a bad way)
+pipes
+Object node in streams 
+Handle error in streams

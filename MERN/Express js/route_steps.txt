@@ -1,0 +1,7 @@
+1. Create routes folder and put your routes in a seperate file
+2.Create instance of express.Router()
+
+3.Instead of app.method change that to "router.method"
+4.Export the router
+5.Import router
+6.Use the(app.use) uilt-in middleware & provide your routes
