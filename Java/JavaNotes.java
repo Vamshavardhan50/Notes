@@ -1,5 +1,19 @@
 // java notes
 
+//Introduction 
+👉Java file Name and class Name should not be same when we "public" modifier is not present
+👉String args[] --> which is used to send paramter to the main method of String in the form of 1D-array
+👉class file is generated when you compile the java file(source code) and Every class in the java file a new class file is generated in the root folder of the java file(source code)
+
+       Source code   (Java file) 
+          ⬇️
+        Byte code    (class file)
+          ⬇️
+       Binary code   (Low level Lang (Binary code),which can be understand by computer/machine) 
+
+👉Java is a Platform Independent(Byte code)
+  
+
 // Data types:
 // primitive Data types and non primitive Data types
 
