@@ -12,6 +12,16 @@
 //        Binary code   (Low level Lang (Binary code),which can be understand by computer/machine) 
 
 // 👉Java is a Platform Independent(Byte code)
+
+// Variables 
+//   'Global Values'
+// byte,short,int long by default value is 0
+// fLOAT by default value is 0.0f
+// double by default value is 0.000d
+// char by default values is null
+// boolean by default values is null
+
+//   'Local Values variables should be assigned'     
   
 
 // Data types:
@@ -97,6 +107,9 @@
 
 
 // operators ---> learn from python ,common in all languages and same 
+
+// && --> if conditions true then pass the if (1 1 -- >1) ,but if first condition failes then second condition wont be checked 
+// &  --> it will check the both condition nor depends on first condition true or false
 // types of operators and ternary operator 
 
 
