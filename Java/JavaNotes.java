@@ -1,17 +1,17 @@
 // java notes
 
 //Introduction 
-👉Java file Name and class Name should not be same when we "public" modifier is not present
-👉String args[] --> which is used to send paramter to the main method of String in the form of 1D-array
-👉class file is generated when you compile the java file(source code) and Every class in the java file a new class file is generated in the root folder of the java file(source code)
+// 👉Java file Name and class Name should not be same when we "public" modifier is not present
+// 👉String args[] --> which is used to send paramter to the main method of String in the form of 1D-array
+// 👉class file is generated when you compile the java file(source code) and Every class in the java file a new class file is generated in the root folder of the java file(source code)
 
-       Source code   (Java file) 
-          ⬇️
-        Byte code    (class file)
-          ⬇️
-       Binary code   (Low level Lang (Binary code),which can be understand by computer/machine) 
+//        Source code   (Java file) 
+//           ⬇️
+//         Byte code    (class file)
+//           ⬇️
+//        Binary code   (Low level Lang (Binary code),which can be understand by computer/machine) 
 
-👉Java is a Platform Independent(Byte code)
+// 👉Java is a Platform Independent(Byte code)
   
 
 // Data types:
@@ -56,11 +56,18 @@
 // Type conversion ->implicit Conversion(done by compiler)
 
 
-// byte a = 127;   range -> -126 to 126
+// byte a = 127;   range -> -128 to 128
 // int b = 257; range -> -2147483648 to 2147483647
 
 // widening->  a=b ❌ higher range can`t be assign to lower range 
 // narrowing  ->  b=a  ✅ lower range can be assign to higher range
+
+// byte + byte -->int
+// short + short-->int
+// long + long -->long
+// int + long --> long
+// long + double --> double
+
 
 
 // Example
