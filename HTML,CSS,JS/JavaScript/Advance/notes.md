@@ -1,4 +1,4 @@
-## 🚀 JavaScript Notes Part - 2
+## 🚀 JavaScript Notes Part - 3
 
 📝 Compiled with ☕ and ❤️ by **Vamsha vardhan**
 
