@@ -1,3 +1,10 @@
+## 🚀 JavaScript Notes Part - 1
+
+📝 Compiled with ☕ and ❤️ by **Vamsha vardhan**
+
+**GitHub:** [github.com/Vamshavardhan50](https://github.com/Vamshavardhan50)  
+**LinkedIn:** [linkedin.com/in/chintha-vamsha-vardhan-4b3991253](https://www.linkedin.com/in/chintha-vamsha-vardhan-4b3991253/)
+
 # 📘Chapter-13 JSON (JavaScript Object Notation) – Complete Notes
 
 ---
@@ -1085,7 +1092,6 @@ Here’s the full list in recommended order:
 
 ---
 
- 
 ## 🧠 Chapter - 18
 
 ## 📘 **What is a Callback in JavaScript?**
@@ -1098,10 +1104,10 @@ A **callback** is a **function passed as an argument to another function**, whic
 
 JavaScript is **single-threaded** and **non-blocking**, so it uses callbacks to handle **asynchronous operations** like:
 
-* Fetching data from an API
-* Reading files
-* User interactions (clicks, typing, etc.)
-* Timers (`setTimeout`, `setInterval`)
+- Fetching data from an API
+- Reading files
+- User interactions (clicks, typing, etc.)
+- Timers (`setTimeout`, `setInterval`)
 
 ---
 
@@ -1228,10 +1234,10 @@ loginUser("alice", handleUser);
 
 ```javascript
 loginUser("alice")
-  .then(user => getUserProfile(user.id))
-  .then(profile => getUserPosts(profile.id))
-  .then(posts => displayPosts(posts))
-  .catch(err => console.error(err));
+  .then((user) => getUserProfile(user.id))
+  .then((profile) => getUserPosts(profile.id))
+  .then((posts) => displayPosts(posts))
+  .catch((err) => console.error(err));
 ```
 
 ### ✅ 3. **Async/Await (Cleaner Syntax)**
@@ -1268,13 +1274,15 @@ async function showUserPosts() {
 > Use callbacks **only when necessary**, and switch to **Promises or Async/Await** for complex async logic to improve code readability and maintainability.
 
 ---
-## 🧠 Chapter - 19 
+
+## 🧠 Chapter - 19
+
 ## 🔹 3. **`setTimeout()` & `setInterval()` in JavaScript**
 
 ### 🧠 What Are They?
 
-* `setTimeout()` and `setInterval()` are **asynchronous timer functions** used to **schedule code execution** after a delay or at regular intervals.
-* They are part of the **Web APIs** provided by the browser (or Node.js).
+- `setTimeout()` and `setInterval()` are **asynchronous timer functions** used to **schedule code execution** after a delay or at regular intervals.
+- They are part of the **Web APIs** provided by the browser (or Node.js).
 
 ---
 
@@ -1327,8 +1335,8 @@ clearTimeout(id);
 let intervalId = setInterval(callback, delay, arg1, arg2, ...);
 ```
 
-* Executes the `callback` **repeatedly** at every `delay` interval.
-* Returns an `intervalId` which can be cleared using `clearInterval()`.
+- Executes the `callback` **repeatedly** at every `delay` interval.
+- Returns an `intervalId` which can be cleared using `clearInterval()`.
 
 ### 📦 Example:
 
@@ -1347,8 +1355,8 @@ let id = setInterval(() => {
 ### 🔹 Usage:
 
 ```js
-clearTimeout(timeoutId);    // Cancels a timeout
-clearInterval(intervalId);  // Cancels an interval
+clearTimeout(timeoutId); // Cancels a timeout
+clearInterval(intervalId); // Cancels an interval
 ```
 
 Used to **prevent the execution** of a scheduled timeout or **stop a recurring interval**.
@@ -1357,9 +1365,9 @@ Used to **prevent the execution** of a scheduled timeout or **stop a recurring i
 
 ## ⚠️ Execution Timing Notes
 
-* The `delay` is **minimum wait time** — actual execution depends on the event loop.
-* If the call stack is busy, the execution is **delayed**.
-* **Minimum delay is \~4ms** for nested timers (in some browsers like Chrome).
+- The `delay` is **minimum wait time** — actual execution depends on the event loop.
+- If the call stack is busy, the execution is **delayed**.
+- **Minimum delay is \~4ms** for nested timers (in some browsers like Chrome).
 
 ```js
 console.log("Start");
@@ -1409,24 +1417,26 @@ document.addEventListener("mousemove", () => {
 
 ## 🧠 `setTimeout` vs `setInterval`
 
-| Feature          | `setTimeout()`                         | `setInterval()`                      |
-| ---------------- | -------------------------------------- | ------------------------------------ |
-| Runs once        | ✅ Yes                                  | ❌ No (repeats)                       |
-| Delay respected? | ✅ Starts after delay                   | ❌ May overlap if callback is slow    |
-| Control          | ✅ More control via recursion           | ❌ Harder to pause/resume dynamically |
-| Use case         | One-time delay, animations, debouncing | Repeated actions, polling, clocks    |
+| Feature          | `setTimeout()`                         | `setInterval()`                       |
+| ---------------- | -------------------------------------- | ------------------------------------- |
+| Runs once        | ✅ Yes                                 | ❌ No (repeats)                       |
+| Delay respected? | ✅ Starts after delay                  | ❌ May overlap if callback is slow    |
+| Control          | ✅ More control via recursion          | ❌ Harder to pause/resume dynamically |
+| Use case         | One-time delay, animations, debouncing | Repeated actions, polling, clocks     |
 
 ---
 
 ## 🛠️ Best Practices
 
-* ❌ Avoid long intervals — prefer recursive `setTimeout` for control.
-* ✅ Always store the ID to clear it when needed.
-* ✅ Clean up timers on component unmount (e.g., in React):
+- ❌ Avoid long intervals — prefer recursive `setTimeout` for control.
+- ✅ Always store the ID to clear it when needed.
+- ✅ Clean up timers on component unmount (e.g., in React):
 
 ```js
 useEffect(() => {
-  const id = setTimeout(() => { /* something */ }, 1000);
+  const id = setTimeout(() => {
+    /* something */
+  }, 1000);
   return () => clearTimeout(id);
 }, []);
 ```
@@ -1435,11 +1445,11 @@ useEffect(() => {
 
 ## 📚 Common Use Cases
 
-* Showing/hiding notifications
-* Debouncing or throttling events
-* Polling APIs
-* Countdown timers
-* Animating step-by-step processes
+- Showing/hiding notifications
+- Debouncing or throttling events
+- Polling APIs
+- Countdown timers
+- Animating step-by-step processes
 
 ---
 
@@ -1471,15 +1481,17 @@ for (let i = 1; i <= 5; i++) {
 ```
 
 ---
+
 ## 🧠 Chapter - 20
+
 ## 🔹 **Promises in JavaScript**
 
 A **Promise** is an object representing the eventual completion (or failure) of an asynchronous operation.
 
 ### 🔸 Why Promises?
 
-* To avoid **callback hell**.
-* To write **cleaner and more manageable async code**.
+- To avoid **callback hell**.
+- To write **cleaner and more manageable async code**.
 
 ---
 
@@ -1498,7 +1510,7 @@ A promise has 3 states:
 ```js
 const myPromise = new Promise((resolve, reject) => {
   // Do some async task here...
-  
+
   const success = true;
 
   if (success) {
@@ -1509,8 +1521,8 @@ const myPromise = new Promise((resolve, reject) => {
 });
 ```
 
-* `resolve()` — call this when the operation is successful.
-* `reject()` — call this when the operation fails.
+- `resolve()` — call this when the operation is successful.
+- `reject()` — call this when the operation fails.
 
 ---
 
@@ -1613,7 +1625,6 @@ brokenPromise
 | `.then()`    | Handle fulfilled result            |
 | `.catch()`   | Handle rejected result             |
 | `.finally()` | Runs after `.then()` or `.catch()` |
- 
 
 ---
 
@@ -1626,7 +1637,7 @@ brokenPromise
 The **Fetch API** provides a modern, promise-based way to make HTTP requests in the browser.
 
 ```js
-fetch(url, options)
+fetch(url, options);
 ```
 
 It replaces older approaches like `XMLHttpRequest` with a cleaner and more powerful API.
@@ -1654,9 +1665,9 @@ fetch(url, {
 
 ```js
 fetch("https://api.example.com/data")
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(err => console.error("Fetch error:", err));
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((err) => console.error("Fetch error:", err));
 ```
 
 ---
@@ -1664,25 +1675,24 @@ fetch("https://api.example.com/data")
 ## 🧾 Response Object – Properties
 
 ```js
-fetch("https://api.example.com/data")
-  .then(res => {
-    console.log(res.status);       // e.g., 200
-    console.log(res.ok);           // true if status is 200–299
-    console.log(res.statusText);   // e.g., "OK"
-    console.log(res.headers);      // Headers object
-    return res.json();             // or res.text(), res.blob(), etc.
-  });
+fetch("https://api.example.com/data").then((res) => {
+  console.log(res.status); // e.g., 200
+  console.log(res.ok); // true if status is 200–299
+  console.log(res.statusText); // e.g., "OK"
+  console.log(res.headers); // Headers object
+  return res.json(); // or res.text(), res.blob(), etc.
+});
 ```
 
 ---
 
 ## 🛠 Common Methods on `Response`
 
-* `res.json()` → Parse JSON body
-* `res.text()` → Parse plain text
-* `res.blob()` → Parse binary data
-* `res.formData()` → Parse form data
-* `res.arrayBuffer()` → Parse raw data
+- `res.json()` → Parse JSON body
+- `res.text()` → Parse plain text
+- `res.blob()` → Parse binary data
+- `res.formData()` → Parse form data
+- `res.arrayBuffer()` → Parse raw data
 
 ---
 
@@ -1692,16 +1702,16 @@ fetch("https://api.example.com/data")
 fetch("https://api.example.com/users", {
   method: "POST",
   headers: {
-    "Content-Type": "application/json"
+    "Content-Type": "application/json",
   },
   body: JSON.stringify({
     name: "John",
-    email: "john@example.com"
-  })
+    email: "john@example.com",
+  }),
 })
-  .then(res => res.json())
-  .then(data => console.log("Created:", data))
-  .catch(err => console.error("Error:", err));
+  .then((res) => res.json())
+  .then((data) => console.log("Created:", data))
+  .catch((err) => console.error("Error:", err));
 ```
 
 ---
@@ -1713,8 +1723,8 @@ fetch("https://api.example.com/users", {
 ```js
 fetch("https://api.example.com/private", {
   headers: {
-    "Authorization": "Bearer YOUR_TOKEN_HERE"
-  }
+    Authorization: "Bearer YOUR_TOKEN_HERE",
+  },
 });
 ```
 
@@ -1722,7 +1732,7 @@ fetch("https://api.example.com/private", {
 
 ```js
 fetch("https://example.com/api", {
-  credentials: "include" // or "same-origin"
+  credentials: "include", // or "same-origin"
 });
 ```
 
@@ -1734,14 +1744,14 @@ Fetch only rejects the promise for **network errors**. Even a 404/500 returns a 
 
 ```js
 fetch("https://api.example.com/data")
-  .then(res => {
+  .then((res) => {
     if (!res.ok) {
       throw new Error(`HTTP error! Status: ${res.status}`);
     }
     return res.json();
   })
-  .then(data => console.log(data))
-  .catch(err => console.error("Caught error:", err));
+  .then((data) => console.log(data))
+  .catch((err) => console.error("Caught error:", err));
 ```
 
 ---
@@ -1753,9 +1763,9 @@ const controller = new AbortController();
 const signal = controller.signal;
 
 fetch("https://api.example.com/data", { signal })
-  .then(res => res.json())
-  .then(data => console.log(data))
-  .catch(err => {
+  .then((res) => res.json())
+  .then((data) => console.log(data))
+  .catch((err) => {
     if (err.name === "AbortError") {
       console.log("Request was aborted");
     } else {
@@ -1781,12 +1791,11 @@ fetch(url, { headers });
 You can also check or loop through headers:
 
 ```js
-fetch(url)
-  .then(res => {
-    for (let [key, value] of res.headers.entries()) {
-      console.log(`${key}: ${value}`);
-    }
-  });
+fetch(url).then((res) => {
+  for (let [key, value] of res.headers.entries()) {
+    console.log(`${key}: ${value}`);
+  }
+});
 ```
 
 ---
@@ -1806,7 +1815,7 @@ Access-Control-Allow-Methods: GET, POST
 
 ```js
 fetch("https://another-origin.com/api", {
-  mode: "cors"
+  mode: "cors",
 });
 ```
 
@@ -1820,7 +1829,7 @@ formData.append("avatar", fileInput.files[0]);
 
 fetch("/upload", {
   method: "POST",
-  body: formData
+  body: formData,
 });
 ```
 
@@ -1844,8 +1853,8 @@ for (let url of urls) {
 
 ```js
 const urls = ["url1", "url2"];
-const responses = await Promise.all(urls.map(url => fetch(url)));
-const data = await Promise.all(responses.map(res => res.json()));
+const responses = await Promise.all(urls.map((url) => fetch(url)));
+const data = await Promise.all(responses.map((res) => res.json()));
 ```
 
 ---
@@ -1858,7 +1867,7 @@ function fetchWithTimeout(url, options, timeout = 5000) {
     fetch(url, options),
     new Promise((_, reject) =>
       setTimeout(() => reject(new Error("Timeout")), timeout)
-    )
+    ),
   ]);
 }
 ```
@@ -1872,9 +1881,9 @@ async function login(email, password) {
   const res = await fetch("/api/login", {
     method: "POST",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify({ email, password })
+    body: JSON.stringify({ email, password }),
   });
 
   if (!res.ok) {
@@ -1905,11 +1914,11 @@ async function login(email, password) {
 
 ## 📚 Related Topics to Learn Next
 
-* Axios (Fetch alternative with more features)
-* HTTP status codes
-* CORS policies and browser security
-* WebSockets (for real-time)
-* GraphQL with fetch
+- Axios (Fetch alternative with more features)
+- HTTP status codes
+- CORS policies and browser security
+- WebSockets (for real-time)
+- GraphQL with fetch
 
 ---
 
@@ -1919,9 +1928,9 @@ async function login(email, password) {
 
 ## 🧠 What is `async/await`?
 
-* `async/await` is **syntactic sugar over Promises**.
-* It helps write **asynchronous code** that looks and behaves more like synchronous code.
-* Introduced in **ES2017 (ES8)**.
+- `async/await` is **syntactic sugar over Promises**.
+- It helps write **asynchronous code** that looks and behaves more like synchronous code.
+- Introduced in **ES2017 (ES8)**.
 
 ---
 
@@ -1929,11 +1938,11 @@ async function login(email, password) {
 
 ### 1. `async` Function
 
-* Declares a function that will always return a **Promise**.
+- Declares a function that will always return a **Promise**.
 
 ```js
 async function myFunc() {
-  return 'Hello';
+  return "Hello";
 }
 
 myFunc().then(console.log); // Output: Hello
@@ -1943,13 +1952,13 @@ If you return a non-promise value, it's automatically wrapped in a resolved Prom
 
 ### 2. `await` Keyword
 
-* Can **only be used inside `async` functions**.
-* Pauses execution of the function **until the Promise is resolved**.
-* Returns the resolved value of the Promise.
+- Can **only be used inside `async` functions**.
+- Pauses execution of the function **until the Promise is resolved**.
+- Returns the resolved value of the Promise.
 
 ```js
 async function fetchData() {
-  const res = await fetch('https://api.example.com/data');
+  const res = await fetch("https://api.example.com/data");
   const data = await res.json();
   console.log(data);
 }
@@ -1975,8 +1984,8 @@ The above is equivalent to:
 ```js
 function getData() {
   return fetchData()
-    .then(result => result)
-    .catch(err => console.error(err));
+    .then((result) => result)
+    .catch((err) => console.error(err));
 }
 ```
 
@@ -2006,11 +2015,11 @@ const [user, posts] = await Promise.all([getUser(), getPosts()]);
 ```js
 async function getUserData() {
   try {
-    const res = await fetch('/user');
+    const res = await fetch("/user");
     const data = await res.json();
     return data;
   } catch (error) {
-    console.error('Failed to fetch user:', error);
+    console.error("Failed to fetch user:", error);
   }
 }
 ```
@@ -2022,7 +2031,7 @@ try {
   const user = await getUser();
   const posts = await getPosts(user.id);
 } catch (err) {
-  console.error('Something went wrong', err);
+  console.error("Something went wrong", err);
 }
 ```
 
@@ -2066,19 +2075,19 @@ Useful for top-level `await` before ES2022:
 ## 🔝 Top-Level Await (ES2022+)
 
 ```js
-const res = await fetch('/api'); // valid at module level
+const res = await fetch("/api"); // valid at module level
 ```
 
-* Only available in **ES Modules**, not in CommonJS.
+- Only available in **ES Modules**, not in CommonJS.
 
 ---
 
 ## 💡 Best Practices
 
-* Use `async/await` for **readability** and **linear code flow**.
-* Use `try/catch` to handle errors gracefully.
-* Use `Promise.all()` for **concurrent tasks** when safe.
-* Avoid blocking loops — use `map` with `Promise.all()` for parallel processing if needed.
+- Use `async/await` for **readability** and **linear code flow**.
+- Use `try/catch` to handle errors gracefully.
+- Use `Promise.all()` for **concurrent tasks** when safe.
+- Avoid blocking loops — use `map` with `Promise.all()` for parallel processing if needed.
 
 ---
 
@@ -2095,7 +2104,7 @@ async function getUserProfile(id) {
 
     return { user, posts };
   } catch (error) {
-    console.error('Error fetching profile:', error);
+    console.error("Error fetching profile:", error);
   }
 }
 ```
@@ -2129,17 +2138,17 @@ async function getUserProfile(id) {
 
 ### 🔹 What Are Modules?
 
-* **Modules** in JavaScript are files that contain code which is **self-contained and reusable**.
-* Help **encapsulate logic**, avoid polluting the global namespace, and manage dependencies efficiently.
+- **Modules** in JavaScript are files that contain code which is **self-contained and reusable**.
+- Help **encapsulate logic**, avoid polluting the global namespace, and manage dependencies efficiently.
 
 ---
 
 ## 1. 🔰 Why Use Modules?
 
-* Promote **code reusability**.
-* Enable **separation of concerns**.
-* Help in **maintaining** and **scaling** codebases.
-* Prevent **naming conflicts** (each module has its own scope).
+- Promote **code reusability**.
+- Enable **separation of concerns**.
+- Help in **maintaining** and **scaling** codebases.
+- Prevent **naming conflicts** (each module has its own scope).
 
 ---
 
@@ -2185,14 +2194,14 @@ export { divide, mod };
 
 ```js
 // app.js
-import { add, multiply } from './utils.js';
-import subtract from './utils.js';
+import { add, multiply } from "./utils.js";
+import subtract from "./utils.js";
 ```
 
 ### 🔀 Rename While Importing
 
 ```js
-import { add as addition } from './utils.js';
+import { add as addition } from "./utils.js";
 ```
 
 ---
@@ -2211,7 +2220,7 @@ module.exports = { add };
 
 ```js
 // app.js
-const { add } = require('./utils');
+const { add } = require("./utils");
 ```
 
 > ⚠️ `require` is **synchronous** and only works in Node.js (unless bundled).
@@ -2220,8 +2229,8 @@ const { add } = require('./utils');
 
 ## 5. 🏗 Module Scope
 
-* Variables/functions declared in a module are **not global**.
-* Each module has its own **module scope**.
+- Variables/functions declared in a module are **not global**.
+- Each module has its own **module scope**.
 
 ---
 
@@ -2231,7 +2240,7 @@ const { add } = require('./utils');
 | ------------------ | ------------------------ | ------------------------- |
 | Syntax             | `export const foo = ...` | `export default foo`      |
 | Import Syntax      | `import { foo }`         | `import foo`              |
-| Multiple per file? | ✅                        | ❌                         |
+| Multiple per file? | ✅                       | ❌                        |
 | Use-case           | Multiple exports         | One main thing per module |
 
 ---
@@ -2240,7 +2249,7 @@ const { add } = require('./utils');
 
 ```js
 // Only in modules
-const data = await fetch('/api/data').then(res => res.json());
+const data = await fetch("/api/data").then((res) => res.json());
 ```
 
 > ✅ Works only in **ES Modules** and not in CommonJS.
@@ -2259,8 +2268,8 @@ const data = await fetch('/api/data').then(res => res.json());
 
 ## 9. 🌐 Modules in Node.js
 
-* Use `.mjs` extension **or**
-* Set `"type": "module"` in `package.json`.
+- Use `.mjs` extension **or**
+- Set `"type": "module"` in `package.json`.
 
 ```json
 {
@@ -2274,7 +2283,7 @@ const data = await fetch('/api/data').then(res => res.json());
 
 ```js
 // Load a module dynamically
-const module = await import('./math.js');
+const module = await import("./math.js");
 module.add(2, 3);
 ```
 
@@ -2295,17 +2304,17 @@ module.add(2, 3);
 
 ## 12. 🔍 Tree Shaking
 
-* **Eliminates unused exports** from final bundle.
-* Only works with **ES Modules**, not CommonJS.
+- **Eliminates unused exports** from final bundle.
+- Only works with **ES Modules**, not CommonJS.
 
 ---
 
 ## 13. ✅ Best Practices
 
-* Use **ES Modules** for new projects.
-* Stick to **one default export** per file (if used).
-* Use **descriptive filenames** (`mathUtils.js`, `authService.js`).
-* Keep **modules small and focused**.
+- Use **ES Modules** for new projects.
+- Stick to **one default export** per file (if used).
+- Use **descriptive filenames** (`mathUtils.js`, `authService.js`).
+- Keep **modules small and focused**.
 
 ---
 
@@ -2319,15 +2328,16 @@ module.add(2, 3);
 | **Side Effects**           | A module runs code when imported (e.g., global setup)        |
 
 ---
+
 # 🟦Chapter - 24 ES6 (ECMAScript 2015) Features in JavaScript
 
 ## 1. `let` and `const`
 
 ### ✅ `let`
 
-* Block-scoped (limited to `{}`)
-* Can be reassigned
-* Not hoisted like `var`
+- Block-scoped (limited to `{}`)
+- Can be reassigned
+- Not hoisted like `var`
 
 ```js
 let count = 10;
@@ -2336,9 +2346,9 @@ count = 15;
 
 ### ✅ `const`
 
-* Block-scoped
-* Cannot be reassigned
-* Must be initialized during declaration
+- Block-scoped
+- Cannot be reassigned
+- Must be initialized during declaration
 
 ```js
 const PI = 3.14;
@@ -2349,22 +2359,22 @@ const PI = 3.14;
 
 ## 2. Arrow Functions `()=>`
 
-* Shorter syntax for writing functions
-* `this` is lexically bound (no dynamic `this`)
-* Cannot be used as constructors
+- Shorter syntax for writing functions
+- `this` is lexically bound (no dynamic `this`)
+- Cannot be used as constructors
 
 ```js
 const add = (a, b) => a + b;
-const square = n => n * n;
+const square = (n) => n * n;
 ```
 
 ---
 
 ## 3. Template Literals
 
-* Use backticks `` ` ``
-* Multiline strings
-* Embed expressions using `${}`
+- Use backticks `` ` ``
+- Multiline strings
+- Embed expressions using `${}`
 
 ```js
 const name = "John";
@@ -2422,7 +2432,7 @@ const arr2 = [...arr1, 3, 4];
 
 ## 7. Enhanced Object Literals
 
-* Shorthand for properties and methods
+- Shorthand for properties and methods
 
 ```js
 const name = "Max";
@@ -2430,18 +2440,17 @@ const user = {
   name,
   greet() {
     console.log(`Hi, I'm ${this.name}`);
-  }
+  },
 };
 ```
 
 ---
 
-
 ## 14. Map and Set
 
 ### ✅ Map
 
-* Stores key-value pairs (any data type as key)
+- Stores key-value pairs (any data type as key)
 
 ```js
 const map = new Map();
@@ -2451,7 +2460,7 @@ console.log(map.get("name")); // Alice
 
 ### ✅ Set
 
-* Stores unique values
+- Stores unique values
 
 ```js
 const set = new Set([1, 2, 2, 3]);
@@ -2459,13 +2468,15 @@ console.log(set); // Set {1, 2, 3}
 ```
 
 ---
+
 ## Chapter - 25
+
 ## 🔹 1. `this` in Global Scope
 
 In the **global execution context**, `this` refers to the **global object**:
 
-* In browsers: `window`
-* In Node.js: `global`
+- In browsers: `window`
+- In Node.js: `global`
 
 ### ✅ Example:
 
@@ -2491,7 +2502,7 @@ show(); // window (in browsers)
 ### ⚙️ Strict Mode:
 
 ```js
-'use strict';
+"use strict";
 function show() {
   console.log(this);
 }
@@ -2511,14 +2522,14 @@ function foo() {
   console.log(this);
 }
 
-foo.call(null);   // window (in browser)
+foo.call(null); // window (in browser)
 foo.call(undefined); // window
 ```
 
 In strict mode, `this` remains `null` or `undefined`.
 
 ```js
-'use strict';
+"use strict";
 function foo() {
   console.log(this);
 }
@@ -2531,10 +2542,10 @@ foo.call(null); // null
 
 ```js
 const person = {
-  name: 'Alice',
+  name: "Alice",
   greet() {
     console.log(this.name);
-  }
+  },
 };
 
 person.greet(); // Alice
@@ -2556,7 +2567,7 @@ const user = {
   name: "John",
   sayHi() {
     console.log(this.name);
-  }
+  },
 };
 user.sayHi(); // John
 ```
@@ -2580,7 +2591,7 @@ function greet() {
 }
 const person = { name: "John" };
 
-greet.call(person);  // Hello, John
+greet.call(person); // Hello, John
 greet.apply(person); // Hello, John
 ```
 
@@ -2602,7 +2613,7 @@ const user = {
   name: "Alice",
   greet: () => {
     console.log(this.name); // ❌ undefined, not "Alice"
-  }
+  },
 };
 user.greet();
 ```
@@ -2633,7 +2644,7 @@ Nested arrow functions **continue to inherit `this` from their outer (non-arrow)
 
 ```js
 const person = {
-  name: 'Bob',
+  name: "Bob",
   outer() {
     const inner = () => {
       const innerMost = () => {
@@ -2642,7 +2653,7 @@ const person = {
       innerMost();
     };
     inner();
-  }
+  },
 };
 
 person.outer(); // Bob
@@ -2658,8 +2669,8 @@ When used in DOM event handlers, `this` refers to the **element the event is bou
 <button id="myBtn">Click Me</button>
 
 <script>
-  const btn = document.getElementById('myBtn');
-  btn.addEventListener('click', function () {
+  const btn = document.getElementById("myBtn");
+  btn.addEventListener("click", function () {
     console.log(this); // <button> element
   });
 </script>
@@ -2668,7 +2679,7 @@ When used in DOM event handlers, `this` refers to the **element the event is bou
 > ⚠️ Using arrow functions here will not work as expected:
 
 ```js
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   console.log(this); // ❌ window, not button
 });
 ```
@@ -2688,35 +2699,43 @@ btn.addEventListener('click', () => {
 | DOM Event (normal function) | DOM element                                |
 | DOM Event (arrow function)  | Lexical `this` (usually `window`)          |
 | Nested arrow function       | Inherited from outermost non-arrow context |
+
 ---
+
 # **Chapter - 26**
+
 # **1. Classes in JavaScript**
+
 JavaScript classes are templates for creating objects. They encapsulate data and behavior into reusable blueprints.
 
 ### **Example:**
+
 ```javascript
 class User {
-    constructor(username, email, password) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
-    }
+  constructor(username, email, password) {
+    this.username = username;
+    this.email = email;
+    this.password = password;
+  }
 }
 ```
+
 Here, `User` is a class with properties (`username`, `email`, `password`) initialized inside a **constructor**.
 
 ---
 
 # **2. Constructor Method**
+
 The `constructor` is a special method in a class that initializes an object’s properties.
 
 ### **Example:**
+
 ```javascript
 class Car {
-    constructor(brand, model) {
-        this.brand = brand;
-        this.model = model;
-    }
+  constructor(brand, model) {
+    this.brand = brand;
+    this.model = model;
+  }
 }
 
 const myCar = new Car("Toyota", "Corolla");
@@ -2726,19 +2745,21 @@ console.log(myCar); // Car { brand: 'Toyota', model: 'Corolla' }
 ---
 
 # **3. Instance Methods**
+
 These are functions defined inside a class that operate on the object’s properties.
 
 ### **Example:**
+
 ```javascript
 class User {
-    constructor(username, email) {
-        this.username = username;
-        this.email = email;
-    }
+  constructor(username, email) {
+    this.username = username;
+    this.email = email;
+  }
 
-    login() {
-        console.log(`${this.username} is logged in`);
-    }
+  login() {
+    console.log(`${this.username} is logged in`);
+  }
 }
 
 const user1 = new User("Alice", "alice@example.com");
@@ -2748,70 +2769,78 @@ user1.login(); // Output: Alice is logged in
 ---
 
 # **4. Inheritance (Extending a Class)**
+
 A class can inherit from another class using the `extends` keyword.
 
 ### **Example:**
+
 ```javascript
 class Animal {
-    constructor(name) {
-        this.name = name;
-    }
+  constructor(name) {
+    this.name = name;
+  }
 
-    makeSound() {
-        console.log("Some generic sound...");
-    }
+  makeSound() {
+    console.log("Some generic sound...");
+  }
 }
 
 class Dog extends Animal {
-    constructor(name, breed) {
-        super(name);
-        this.breed = breed;
-    }
+  constructor(name, breed) {
+    super(name);
+    this.breed = breed;
+  }
 
-    bark() {
-        console.log("Woof! Woof!");
-    }
+  bark() {
+    console.log("Woof! Woof!");
+  }
 }
 
 const myDog = new Dog("Buddy", "Golden Retriever");
 myDog.makeSound(); // Output: Some generic sound...
-myDog.bark();      // Output: Woof! Woof!
+myDog.bark(); // Output: Woof! Woof!
 ```
+
 - `Dog` extends `Animal`, inheriting its properties (`name`) and methods (`makeSound()`).
 - The `super(name)` calls the parent constructor.
 
 ---
 
 # **5. Method Overriding**
+
 A subclass can redefine a method from the parent class.
 
 ### **Example:**
+
 ```javascript
 class Animal {
-    speak() {
-        console.log("Animal speaks");
-    }
+  speak() {
+    console.log("Animal speaks");
+  }
 }
 
 class Cat extends Animal {
-    speak() {
-        console.log("Meow! Meow!");
-    }
+  speak() {
+    console.log("Meow! Meow!");
+  }
 }
 
 const kitty = new Cat();
 kitty.speak(); // Output: Meow! Meow!
 ```
+
 Here, the `speak()` method in `Cat` overrides the `speak()` method in `Animal`.
 
 ---
 
 # **6. The `instanceof` Operator**
+
 It checks if an object belongs to a class or its subclass.
 
 ### **Example:**
+
 ```javascript
-console.log(myDog instanceof Dog);    // true
+console.log(myDog instanceof Dog); // true
 console.log(myDog instanceof Animal); // true
 console.log(myDog instanceof Object); // true
 ```
@@ -2819,44 +2848,49 @@ console.log(myDog instanceof Object); // true
 ---
 
 # **7. Static Properties & Methods**
+
 Static properties and methods belong to the class itself, not instances.
 
 ### **Example:**
+
 ```javascript
 class MathUtils {
-    static PI = 3.1416;
+  static PI = 3.1416;
 
-    static add(a, b) {
-        return a + b;
-    }
+  static add(a, b) {
+    return a + b;
+  }
 }
 
-console.log(MathUtils.PI);         // 3.1416
+console.log(MathUtils.PI); // 3.1416
 console.log(MathUtils.add(10, 20)); // 30
 ```
+
 - `PI` and `add()` are **static**, meaning they can be accessed directly using the class name.
 
 ---
 
 # **8. Encapsulation (Private Properties)**
+
 Private properties can only be accessed within the class.
 
 ### **Example:**
+
 ```javascript
 class BankAccount {
-    #balance;
+  #balance;
 
-    constructor(initialBalance) {
-        this.#balance = initialBalance;
-    }
+  constructor(initialBalance) {
+    this.#balance = initialBalance;
+  }
 
-    deposit(amount) {
-        this.#balance += amount;
-    }
+  deposit(amount) {
+    this.#balance += amount;
+  }
 
-    getBalance() {
-        return this.#balance;
-    }
+  getBalance() {
+    return this.#balance;
+  }
 }
 
 const myAccount = new BankAccount(1000);
@@ -2864,57 +2898,63 @@ myAccount.deposit(500);
 console.log(myAccount.getBalance()); // Output: 1500
 console.log(myAccount.#balance); // Error: Private field cannot be accessed
 ```
+
 - `#balance` is a **private property**, preventing direct access from outside.
 
 ---
 
 # **9. Polymorphism**
+
 Polymorphism allows a method to be used in different ways.
 
 ### **Example:**
+
 ```javascript
 class Shape {
-    draw() {
-        console.log("Drawing a shape");
-    }
+  draw() {
+    console.log("Drawing a shape");
+  }
 }
 
 class Circle extends Shape {
-    draw() {
-        console.log("Drawing a circle");
-    }
+  draw() {
+    console.log("Drawing a circle");
+  }
 }
 
 class Square extends Shape {
-    draw() {
-        console.log("Drawing a square");
-    }
+  draw() {
+    console.log("Drawing a square");
+  }
 }
 
 const shapes = [new Circle(), new Square()];
-shapes.forEach(shape => shape.draw());
+shapes.forEach((shape) => shape.draw());
 ```
+
 Each class implements its version of `draw()`.
 
 ---
 
 # **10. Getter and Setter Methods**
+
 `get` and `set` allow controlled access to properties.
 
 ### **Example:**
+
 ```javascript
 class Person {
-    constructor(name) {
-        this._name = name;
-    }
+  constructor(name) {
+    this._name = name;
+  }
 
-    get name() {
-        return this._name;
-    }
+  get name() {
+    return this._name;
+  }
 
-    set name(newName) {
-        this._name = newName;
-    }
+  set name(newName) {
+    this._name = newName;
+  }
 }
 
 const person = new Person("John");
@@ -2926,114 +2966,131 @@ console.log(person.name); // Doe
 ---
 
 # **Final Thoughts**
+
 Your provided code utilizes:
 ✅ **Classes**  
 ✅ **Inheritance**  
 ✅ **Instance Methods**  
 ✅ **Method Overriding**  
 ✅ **Instanceof Operator**  
-✅ **Static Properties & Methods**  
+✅ **Static Properties & Methods**
 
 ---
 
+# **`call`, `apply`, and `bind` in JavaScript**
 
-# **`call`, `apply`, and `bind` in JavaScript**  
+## **1. Understanding `this` in JavaScript**
 
-## **1. Understanding `this` in JavaScript**  
-Before diving into `call`, `apply`, and `bind`, it’s essential to understand `this`.  
-- The `this` keyword refers to the object that is currently executing the function.  
-- The value of `this` depends on how a function is called.  
+Before diving into `call`, `apply`, and `bind`, it’s essential to understand `this`.
 
-## **2. `call()`, `apply()`, and `bind()` Overview**  
-These methods allow us to control the value of `this` in function execution.  
+- The `this` keyword refers to the object that is currently executing the function.
+- The value of `this` depends on how a function is called.
 
-| Method  | Usage | Arguments | Returns | When to Use |
-|---------|------|----------|---------|------------|
-| **`call`** | Calls the function immediately | `thisArg, arg1, arg2, ...` | Function result | When you need to invoke a function with a specified `this` value and pass arguments individually |
-| **`apply`** | Calls the function immediately | `thisArg, [arg1, arg2, ...]` (array) | Function result | When you need to invoke a function with a specified `this` value and pass arguments as an array |
-| **`bind`** | Returns a new function with `this` bound | `thisArg, arg1, arg2, ...` | New function | When you need to create a new function with a permanently bound `this` value |
+## **2. `call()`, `apply()`, and `bind()` Overview**
+
+These methods allow us to control the value of `this` in function execution.
+
+| Method      | Usage                                    | Arguments                            | Returns         | When to Use                                                                                      |
+| ----------- | ---------------------------------------- | ------------------------------------ | --------------- | ------------------------------------------------------------------------------------------------ |
+| **`call`**  | Calls the function immediately           | `thisArg, arg1, arg2, ...`           | Function result | When you need to invoke a function with a specified `this` value and pass arguments individually |
+| **`apply`** | Calls the function immediately           | `thisArg, [arg1, arg2, ...]` (array) | Function result | When you need to invoke a function with a specified `this` value and pass arguments as an array  |
+| **`bind`**  | Returns a new function with `this` bound | `thisArg, arg1, arg2, ...`           | New function    | When you need to create a new function with a permanently bound `this` value                     |
 
 ---
 
-## **3. `call()` Method**  
+## **3. `call()` Method**
+
 The `call()` method is used to invoke a function with a specified `this` value and pass arguments individually.
 
-### **Syntax:**  
+### **Syntax:**
+
 ```js
 functionName.call(thisArg, arg1, arg2, ...);
 ```
 
 ### **Example: Using `call()`**
+
 ```js
 const person = {
   name: "Alice",
   greet: function (age) {
     console.log(`Hello, my name is ${this.name} and I am ${age} years old.`);
-  }
+  },
 };
 
 const person2 = { name: "Bob" };
 
-person.greet.call(person2, 25); 
+person.greet.call(person2, 25);
 // Output: Hello, my name is Bob and I am 25 years old.
 ```
+
 ✅ Here, `call()` sets `this` to `person2`, so `greet()` uses `person2.name` instead of `person.name`.
 
 ---
 
-## **4. `apply()` Method**  
+## **4. `apply()` Method**
+
 The `apply()` method works just like `call()`, except it takes arguments as an array.
 
-### **Syntax:**  
+### **Syntax:**
+
 ```js
 functionName.apply(thisArg, [arg1, arg2, ...]);
 ```
 
 ### **Example: Using `apply()`**
+
 ```js
 const numbers = [3, 5, 7, 9];
 
-console.log(Math.max.apply(null, numbers));  
+console.log(Math.max.apply(null, numbers));
 // Output: 9
 ```
+
 ✅ Here, `apply()` is used to pass the array `numbers` to `Math.max`, which expects individual arguments.
 
 ### **Key Difference Between `call()` and `apply()`**
+
 - `call()` passes arguments one by one.
 - `apply()` passes arguments as an array.
 
 ```js
-someFunction.call(thisArg, arg1, arg2, arg3);  // Pass arguments individually
-someFunction.apply(thisArg, [arg1, arg2, arg3]);  // Pass arguments as an array
+someFunction.call(thisArg, arg1, arg2, arg3); // Pass arguments individually
+someFunction.apply(thisArg, [arg1, arg2, arg3]); // Pass arguments as an array
 ```
 
 ---
 
-## **5. `bind()` Method**  
+## **5. `bind()` Method**
+
 The `bind()` method does **not** immediately execute the function. Instead, it returns a **new function** with `this` permanently bound to the specified object.
 
-### **Syntax:**  
+### **Syntax:**
+
 ```js
 const newFunction = functionName.bind(thisArg, arg1, arg2, ...);
 ```
 
 ### **Example: Using `bind()`**
+
 ```js
 const person = {
   name: "Charlie",
   introduce: function () {
     console.log(`Hi, I'm ${this.name}!`);
-  }
+  },
 };
 
 const newIntro = person.introduce.bind(person);
 
-newIntro();  
+newIntro();
 // Output: Hi, I'm Charlie!
 ```
+
 ✅ Here, `bind()` creates a new function (`newIntro`) where `this` is permanently set to `person`.
 
 ### **Example with Pre-set Arguments**
+
 ```js
 function multiply(a, b) {
   return a * b;
@@ -3041,44 +3098,50 @@ function multiply(a, b) {
 
 const double = multiply.bind(null, 2); // `a` is permanently set to 2
 
-console.log(double(5));  
+console.log(double(5));
 // Output: 10
 ```
+
 ✅ The `double` function always multiplies by 2.
 
 ---
 
 ## **6. When to Use `call()`, `apply()`, and `bind()`**
-| Scenario | Method to Use |
-|----------|--------------|
-| Invoke a function with a different `this` and arguments passed individually | `call()` |
-| Invoke a function with a different `this` and arguments passed as an array | `apply()` |
-| Create a new function with a permanently bound `this` value | `bind()` |
+
+| Scenario                                                                    | Method to Use |
+| --------------------------------------------------------------------------- | ------------- |
+| Invoke a function with a different `this` and arguments passed individually | `call()`      |
+| Invoke a function with a different `this` and arguments passed as an array  | `apply()`     |
+| Create a new function with a permanently bound `this` value                 | `bind()`      |
 
 ---
 
 ## **7. Real-world Examples**
 
 ### **1. Borrowing Methods**
+
 Using `call()` to borrow methods from one object to another:
+
 ```js
 const obj1 = {
   name: "John",
   sayName: function () {
     console.log(this.name);
-  }
+  },
 };
 
 const obj2 = { name: "Doe" };
 
-obj1.sayName.call(obj2);  
+obj1.sayName.call(obj2);
 // Output: Doe
 ```
+
 ✅ `call()` lets `obj2` use `sayName()` from `obj1`.
 
 ---
 
 ### **2. Using `apply()` for Function Arguments**
+
 ```js
 function sum(a, b, c) {
   return a + b + c;
@@ -3086,14 +3149,16 @@ function sum(a, b, c) {
 
 const numbers = [1, 2, 3];
 
-console.log(sum.apply(null, numbers));  
+console.log(sum.apply(null, numbers));
 // Output: 6
 ```
+
 ✅ `apply()` passes an array as arguments.
 
 ---
 
 ### **3. Setting `this` in Event Listeners with `bind()`**
+
 ```js
 const button = document.getElementById("myButton");
 
@@ -3101,18 +3166,19 @@ const user = {
   name: "Eve",
   handleClick: function () {
     console.log(`Clicked by ${this.name}`);
-  }
+  },
 };
 
-button.addEventListener("click", user.handleClick.bind(user));  
+button.addEventListener("click", user.handleClick.bind(user));
 // Ensures `this` refers to `user` instead of `button`
 ```
+
 ✅ `bind()` makes sure `this` refers to `user` inside `handleClick()`.
 
 ---
 
 ## **8. Summary**
+
 - `call()` and `apply()` invoke a function immediately with a different `this`.
 - `call()` takes arguments **individually**, while `apply()` takes them **as an array**.
 - `bind()` returns a new function with `this` **permanently bound**.
-

@@ -1,4 +1,9 @@
+## 🚀 JavaScript Notes Part - 2
 
+📝 Compiled with ☕ and ❤️ by **Vamsha vardhan**
+
+**GitHub:** [github.com/Vamshavardhan50](https://github.com/Vamshavardhan50)  
+**LinkedIn:** [linkedin.com/in/chintha-vamsha-vardhan-4b3991253](https://www.linkedin.com/in/chintha-vamsha-vardhan-4b3991253/)
 ## 🔷 1. What is the Global Execution Context (GEC)?
 
 The **Global Execution Context** is the **first execution context** that the JavaScript engine creates when your code starts running. It sets the stage for everything else in JavaScript execution.
